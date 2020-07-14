@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<launch>
+
+	<!--arg name="bag_file_parameter" default=""/-->
+
+ 	<node name="lsd_slam_core" pkg="lsd_slam_core" type="live_slam" output="screen">
+	
+	  <!--param name="bag_camera_argument" value="$(arg bag_file_parameter)"/-->		
+		<remap from="/image" to="image_raw"/>
+	</node>
+
+	
+
+</launch>
