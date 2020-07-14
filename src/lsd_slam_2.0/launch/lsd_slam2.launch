@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<launch> 
+	<node name="lsd_slam_viewer" pkg="lsd_slam_viewer" type="viewer" output="screen" launch-prefix="xterm -e" />
+</launch>
+
+
+

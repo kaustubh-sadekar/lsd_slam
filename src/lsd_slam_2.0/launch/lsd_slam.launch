@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<launch> 
+  
+  <arg name="path" default="/home/natnael/slam_lsd/src/"/>	
+  <arg name="bag1" default="LSD_room"/>
+    
+  <include file="$(find lsd_slam_viewer)/launch/lsd_slam_viewer.launch">
+	
+  </include>
+
+  <include file="$(find lsd_slam_core)/launch/lsd_slam_core.launch">
+  
+  </include>        
+                                                
+  <node pkg="rosbag" type="play" name="bag_player" output="screen" args="--clock $(arg path)$(arg bag1).bag"/>
+  	
+</launch>
+
+
+
